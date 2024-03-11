@@ -9,7 +9,7 @@ youtube-webos had to be reworked to only use `div` tag.
 
 This project doesn't work with all LG TV. It is required that the Offical Youtube Application for your TV is using Cobalt with the library libcobalt.so
 
-This application uses https://github.com/GuillaumeSmaha/youtube-webos-cobalt-app to provide the `*.css` and `*.js` files to inject into Cobalt.
+This application uses <https://github.com/GuillaumeSmaha/youtube-webos-cobalt-app> to provide the `*.css` and `*.js` files to inject into Cobalt.
 
 ![Configuration Screen](./screenshots/1_sm.jpg)
 ![Segment Skipped](./screenshots/2_sm.jpg)
@@ -28,7 +28,7 @@ Same as youtube-webos:
 
 **Note:** Configuration screen can be opened by pressing 🟩 GREEN button on the remote.
 
-## Pre-requisites
+## Prerequisites
 
 - Official YouTube app needs to be uninstalled before installation.
 
@@ -80,11 +80,11 @@ Cobalt is an open-source and it is possible to rebuild `libcobalt.so` and theref
 
 ![Cobalt Patch Process](./screenshots/patch-process.png)
 
-### Instruction to patch your IPK
+### Instructions to patch your IPK
 
 - Install docker:
 
-Follow instructions on https://docs.docker.com/engine/install/
+Follow instructions on <https://docs.docker.com/engine/install/>
 
 Make sure to install all docker components like `docker-buildx-plugin` and `docker-compose-plugin`.
 
@@ -93,7 +93,6 @@ Make sure to install all docker components like `docker-buildx-plugin` and `dock
 ```sh
 sudo apt install jq git patch sed binutils squashfs-tools rename findutils xz-utils
 ```
-
 
 - Clone the repository
 
@@ -123,13 +122,13 @@ If you need to update Cobalt patches or if you don't trusted pre-compiled versio
 The building process is:
 - Clone cobalt repository
 - Apply the patch defined in `cobalt-patches` directory to inject AdBlock javascript after the document is loaded.
-- Build libcobalt.so using docker-compose method.
+- Build `libcobalt.so` using docker-compose method.
 
 This process is handled by the following commands:
 - Clone the repo, enter the folder and call the build command, this will generate libcobalt.so file for the given versions.
 `make cobalt-bin/<COBALT_VERSION>-<SB_API_VERSION>/libcobalt.so cobalt-bin/<COBALT_VERSION>-<SB_API_VERSION>.xz`
 
-For example: for Cobalt 23.lts.4 and SB Api version 12:
+For example: for Cobalt 23.lts.4 and SB API version 12:
 ```sh
 git clone https://github.com/GuillaumeSmaha/youtube-webos-cobalt-browser.git
 
@@ -157,13 +156,13 @@ make cobalt-clean
 
 ## Build Youtube-Webos
 
-See directly on repository https://github.com/GuillaumeSmaha/youtube-webos-cobalt-app.git or README.md in `youtube-webos` directory.
+See the [`youtube-webos-cobalt-app`](https://github.com/GuillaumeSmaha/youtube-webos-cobalt-app) repository directly or `README.md` in `youtube-webos` directory.
 
 ## Development TV setup
 
-### Configuring webOS TV CLI tools with Developer Mode App
+### Configuring webOS CLI tools with Developer Mode App
 
-This is partially based on: https://webostv.developer.lge.com/develop/app-test/using-devmode-app/
+This is partially based on <https://webostv.developer.lge.com/develop/app-test/using-devmode-app/>
 
 - Install Developer Mode app from Content Store
 - Enable developer mode, enable keyserver
